@@ -1,0 +1,21 @@
+{
+    "manifest_version":2,
+    "name": "Reset Last",
+    "version":"0.01",
+    "permissions": ["tabs","alarms", "declarativeContent", "storage", "<all_urls>"],
+    "content_scripts":[
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js":["content.js"]
+        }
+    ],
+    "background":{
+        "scripts":["background.js"]
+    },
+    "browser_action":{
+        "default_icon":"icon.png"
+    }
+
+}
